@@ -13,17 +13,8 @@ module.exports = function (app) {
 
         var newFriendScores = req.body.scores;
         var scoresArray = [];
-        // var friendCount = 0;
-        // var newScore = newFriend.scores;
-        // var matchName = '';
-        // var matchImage = '';
-        var bestMatch = 0;
-        // var match = {
-        //     name: "",
-        //     pics: "",
-        //     difference: 10000
-        // }
 
+        var bestMatch = 0;
 
         for (var i = 0; i < friendList.length; i++) {
 
@@ -35,13 +26,7 @@ module.exports = function (app) {
             }
             scoresArray.push(totalDiff);
 
-            // if (totalDiff <= match.difference) {
-            //     match.name = friendList[i].name,
-            //     match.pics = friendList[i].pics,
-            //     match.difference = totalDiff
-            // bestMatch = diff;
-            // matchName = friendList[i].name;
-            // matchImage = friendList[i].pics;
+
         }
         for (var i = 0; i < scoresArray.length; i++) {
             if (scoresArray[i] <= scoresArray[bestMatch]) {
@@ -55,8 +40,3 @@ module.exports = function (app) {
         friendList.push(req.body);
     });
 };
-// console.log('Best Match: ' + friendList[index]);
-// friendList.push(newFriend);
-// res.json(match);
-// console.log(match.name);
-// res.json({status: 'OK', matchName: matchName, matchImage: matchImage});

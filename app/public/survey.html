@@ -37,6 +37,7 @@
                 </div>
                 <div class="modal-body">
                     <h2 id="match-name"></h2>
+
                     <img id="match-img" scr="" alt="" width=200px>
                 </div>
                 <div class="modal-footer">
@@ -75,7 +76,7 @@
                     <br>
                     <br>
 
-                    <h3>This is the first question</h3>
+                    <h3>Do you like to play the drums?</h3>
                     <div class="input-group mb-3">
 
                         <select class="custom-select" id="q1">
@@ -89,7 +90,7 @@
                     </div>
                     <br>
 
-                    <h3>This is the first question</h3>
+                    <h3>Do you like to sing in the shower?</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q2">
                             <option selected>Choose...</option>
@@ -101,7 +102,7 @@
                         </select>
                     </div>
                     <br>
-                    <h3>This is the first question</h3>
+                    <h3>Do you want to rock and roll all night and party every day?</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q3">
                             <option selected>Choose...</option>
@@ -113,7 +114,7 @@
                         </select>
                     </div>
                     <br>
-                    <h3>This is the first question</h3>
+                    <h3>Do you like spending most of your time on a tour bus traveling around the country?</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q4">
                             <option selected>Choose...</option>
@@ -125,7 +126,7 @@
                         </select>
                     </div>
                     <br>
-                    <h3>This is the first question</h3>
+                    <h3>Are you the most comfortable when you are on stage in front of thousands of screaming fans?</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q5">
                             <option selected>Choose...</option>
@@ -137,7 +138,7 @@
                         </select>
                     </div>
                     <br>
-                    <h3>This is the first question</h3>
+                    <h3>Do you believe that any party is not a "real" party without a karaoke machine?</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q6">
                             <option selected>Choose...</option>
@@ -149,7 +150,7 @@
                         </select>
                     </div>
                     <br>
-                    <h3>This is the first question</h3>
+                    <h3>Your short term goal in life is to win the local Air-Guitar competition.</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q7">
                             <option selected>Choose...</option>
@@ -161,7 +162,7 @@
                         </select>
                     </div>
                     <br>
-                    <h3>This is the first question</h3>
+                    <h3>Your friends get mad at you when you constantly tell them Rock and Roll is the answer to everything.</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q8">
                             <option selected>Choose...</option>
@@ -173,7 +174,7 @@
                         </select>
                     </div>
                     <br>
-                    <h3>This is the first question</h3>
+                    <h3>You wish there was a level beyond "Expert" on Guitar Hero/Band Hero.</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q9">
                             <option selected>Choose...</option>
@@ -185,7 +186,7 @@
                         </select>
                     </div>
                     <br>
-                    <h3>This is the first question</h3>
+                    <h3>You were definitely, without a doubt... born to be wild.</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q10">
                             <option selected>Choose...</option>
@@ -212,12 +213,7 @@
             </div>
         </div>
     </div>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script> -->
+    
 
 
     <script type="text/javascript">
@@ -252,6 +248,19 @@
             })
             $('#results-modal').modal('toggle');
 
+            $("#name").val("");
+            $("#pic").val("");
+            $("#q1").val(""),
+                    $("#q2").val("");
+                    $("#q3").val("");
+                    $("#q4").val("");
+                    $("#q5").val("");
+                    $("#q6").val("");
+                    $("#q7").val("");
+                    $("#q8").val("");
+                    $("#q9").val("");
+                    $("#q10").val("");
+
         });
     </script>
 
@@ -272,7 +281,7 @@
     .jumbotron {
         background-color: #9d2237;
         color: white;
-       
+
 
     }
 
@@ -300,7 +309,6 @@
         color: coral;
         background-color: lightgrey;
         font-family: Georgia, 'Times New Roman', Times, serif;
-        margin-right: 20%;
         padding: 10px;
     }
 </style>
