@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Sarala" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
@@ -21,16 +21,16 @@
 </head>
 
 <body>
-   
+
     <!-- Modal -->
-   
+
     <div id="results-modal" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    
+
                     <h2 class="modal-title">
                         <strong>Best Match</strong>
                     </h2>
@@ -51,21 +51,22 @@
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1 class="display-4 text-center">Find your musical friend</h1>
-               
+                <p class="lead text-center">Take the survey, and remember... 1 is Awesome! and 5 is Not Cool, Man!</p>
             </div>
         </div>
 
         <div class="row">
 
             <div class="col-12">
-<h2></h2>
+                <h2></h2>
 
 
             </div>
 
 
             <div class="col-12">
-                <div class="col-4">
+
+                <div class="col-8 questions">
                     <h4>First enter your name:</h4>
                     <input class="form-control" type="text" placeholder="Name">
 
@@ -86,6 +87,8 @@
                             <option value="5">Five</option>
                         </select>
                     </div>
+                    <br>
+
                     <h3>This is the first question</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q2">
@@ -97,6 +100,7 @@
                             <option value="5">Five</option>
                         </select>
                     </div>
+                    <br>
                     <h3>This is the first question</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q3">
@@ -108,6 +112,7 @@
                             <option value="5">Five</option>
                         </select>
                     </div>
+                    <br>
                     <h3>This is the first question</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q4">
@@ -119,6 +124,7 @@
                             <option value="5">Five</option>
                         </select>
                     </div>
+                    <br>
                     <h3>This is the first question</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q5">
@@ -130,6 +136,7 @@
                             <option value="5">Five</option>
                         </select>
                     </div>
+                    <br>
                     <h3>This is the first question</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q6">
@@ -141,6 +148,7 @@
                             <option value="5">Five</option>
                         </select>
                     </div>
+                    <br>
                     <h3>This is the first question</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q7">
@@ -152,6 +160,7 @@
                             <option value="5">Five</option>
                         </select>
                     </div>
+                    <br>
                     <h3>This is the first question</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q8">
@@ -163,6 +172,7 @@
                             <option value="5">Five</option>
                         </select>
                     </div>
+                    <br>
                     <h3>This is the first question</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q9">
@@ -174,6 +184,7 @@
                             <option value="5">Five</option>
                         </select>
                     </div>
+                    <br>
                     <h3>This is the first question</h3>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="q10">
@@ -185,10 +196,19 @@
                             <option value="5">Five</option>
                         </select>
                     </div>
-                    <button class="btn btn-primary btn-sm btn-block" type="button" id="submit">
-                        <i class="fa fa-check-circle" aria-hidden="true"></i>
-                        Submit</button>
+                    <br>
                 </div>
+
+                <div class="col-12">
+
+                    <div class="form-actions">
+                        <button class="btn btn-primary btn-lg btn-block" type="button" id="submit">Submit</button>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+
             </div>
         </div>
     </div>
@@ -223,44 +243,66 @@
                 ]
             };
             console.log("hello");
-           
 
-            $.post("/api/friends", newFriend, function(data) {
 
-                 $("#match-name").text(data.name);
-                 $("#match-img").attr("src", data.pics);
+            $.post("/api/friends", newFriend, function (data) {
+
+                $("#match-name").text(data.name);
+                $("#match-img").attr("src", data.pics);
             })
             $('#results-modal').modal('toggle');
-               
-                });
 
-
-
-        
+        });
     </script>
 
 
 </body>
 <style>
-    
-
     body {
         background-image: url("https://images.pexels.com/photos/196652/pexels-photo-196652.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+
     }
+
     h1 {
-        
+
         font-family: 'Bree Serif', serif;
-        
+
     }
+
     .jumbotron {
-    background-color: #9d2237;
-    color: white;
-    
-}
-.jumbotron p{
-    font-family:   'Sarala', sans-serif;
-}
-    
+        background-color: #9d2237;
+        color: white;
+       
+
+    }
+
+    .jumbotron p {
+        font-family: 'Sarala', sans-serif;
+    }
+
+    .form-actions {
+        margin: 0 auto;
+
+        text-align: center;
+        width: 50%;
+    }
+
+    #questions {
+        align-content: center;
+
+    }
+
+    h4 {
+        color: khaki;
+    }
+
+    h3 {
+        color: coral;
+        background-color: lightgrey;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-right: 20%;
+        padding: 10px;
+    }
 </style>
 
 </html>
