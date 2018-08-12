@@ -1,14 +1,38 @@
 body {
-    background-image: url("../images/band.jpeg");
+    background-image: url("https://images.pexels.com/photos/196652/pexels-photo-196652.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
 h1 {
-    color: red;
+    font-family: 'Bree Serif', serif;
+}
+
+.jumbotron {
+    background-color: #9d2237;
+    color: white;
+}
+
+.jumbotron p {
+    font-family: 'Sarala', sans-serif;
+    text-decoration: underline;
+}
+
+.form-actions {
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+
+#questions {
+    align-content: center;
 }
 
 h4 {
-    color: red;
+    color: khaki;
 }
-/* body {
-    background-image: url("https://placeimg.com/640/480/any");
-} */
+
+h3 {
+    color: #9d2237;
+    background-color: lightgrey;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+}
